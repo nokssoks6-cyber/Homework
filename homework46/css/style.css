@@ -1,0 +1,18 @@
+* {box-sizing: border-box;}
+.bigbro {border: 1px solid;
+    border-radius: 50px 0 0 50px;
+    height:700px;
+    background: rgb(233, 227, 227);
+    overflow: auto;
+    padding-right: 350px;
+}
+.bro {
+    background: #ada570;
+    width: 250px;
+    height: 250px;
+    padding: 35px;
+    margin: 10px 15px 15px 5px ;
+    border-radius: 16%;
+    display: inline-block;
+    box-shadow:  inset -20px 0px 20px 2px #918a60,inset 0px 20px 20px 2px #918a60,inset 20px 0px 20px 2px #918a60,inset 0px -20px 20px 2px #918a60;
+}
