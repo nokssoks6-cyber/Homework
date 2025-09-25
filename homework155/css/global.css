@@ -1,0 +1,226 @@
+:root {
+    --general-text: #312c27;
+    --accent-text: #1F1711;
+    --accent-text-2: #CEAAD0;
+    --general-bg: #FFF9F4;
+    --accent-bg: #FFE0CB;
+    --accent-color: #FFA55C;
+    --accent-input: #ac907a;
+
+    --transition: all .4s;
+    --border-radius: 20px;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    font-weight: 400px;
+    color: var(--general-text);
+    background: var(--general-bg);
+
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--fixed {
+    overflow-y: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main__about {
+    padding: 140px 0;
+}
+
+.main__program,.main__gallery,.main__testimonals {
+    padding-bottom: 145px;
+}
+
+
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    line-height: 0.82;
+    font-size: 74px;
+    color: var(--accent-text);
+    font-family: 'Gabriola';
+
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 15px;
+    border-radius: 60px;
+    background: var(--accent-color);
+    height: 62px;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background: #FF9138;
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2e35b0;
+    transition: all .6s;
+    padding: 15px;
+}
+
+
+.modal--opened {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__window {
+    position: relative;
+    background: var(--general-bg);
+    border-radius: var(--border-radius);
+    min-height: 491px;
+    width: 100%;
+    max-width: 428px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ;
+    padding: 0 60px;
+}
+
+.modal__img {
+    margin: -111px 0 15px -42px;
+    width: 100%;
+}
+
+.modal__title {
+    font-family: 'Gabriola';
+    font-size: 42px;
+    line-height: .9;
+    color: var(--accent-text);
+    margin-bottom: 10px;
+}
+
+.modal__form {
+    max-width: 308px;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.modal__form-label {
+    margin-bottom: 10px;
+}
+
+.field {
+    position: relative;
+    display: block;
+}
+
+.field span {
+    position: absolute;
+    font-size: 11px;
+    color: var(--accent-input);
+    top: 12px;
+    left: 28px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+
+.field__input {
+    padding: 19px 42px 19px 28px;
+    background: #00000000;
+    border: 1px solid var(--accent-input);
+    border-radius: 100px;
+    width: 100%;
+    height: 62px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.field__input:hover {
+    border-color: var(--accent-color);
+}
+
+.field__input:focus {
+    padding: 26px 42px 12px 28px;
+
+}
+
+.field__input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.field__input::placeholder {
+    color: var(--accent-input);
+    transition: var(--transition);
+}
+
+.field__input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+
+
+.modal__cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal__cancel path,
+.modal__cancel rect {
+    transition: var(--transition);
+}
+
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+    stroke: var(--accent-input)
+}
